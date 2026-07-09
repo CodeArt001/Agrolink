@@ -143,7 +143,7 @@ const Footer = () => {
         </div>
       </div>
       <Divider />
-      <div className="text-center mt-6 pb-6 xl:pb-0 font-sans text-[#F9FBF9]">
+      <div className="text-center mt-6 pb-6 xl:pb-0 font-sans text-[#F9FBF9] text-sm">
         &copy; {new Date().getFullYear()} Agro-AI Infrastructure Platform. All
         rights reserved.
       </div>

@@ -19,8 +19,8 @@ const Herosection = () => {
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-[#041B0E] via-[#041B0E]/90 to-transparent z-0" />
-        <div className="absolute z-10 md:pt-[9rem] pt-[6rem] xl:px-[6rem] md:px-[4rem] px-[1rem]">
-          <span className="bg-[#F9FBF917]  border-none flex justify-center  items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5">
+        <div className="absolute z-10 md:pt-[9rem] pt-[7rem] xl:px-[6rem] md:px-[4rem] px-[1rem]">
+          <span className="bg-[#F9FBF917] border-none flex justify-center items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5">
             <TitleText
               text="AI-First infrastructure"
               color="text-[#F9FBF9]"
@@ -31,15 +31,15 @@ const Herosection = () => {
           <div>
             <TitleText
               text="Building the Digital Infrastructure for Africa's Agro-Economy"
-              className="md:w-[652px] w-[358px] xl:leading-[60px] py-3"
-              size="md:text-[48px] text-[31px]"
+              className="md:w-[652px] w-[358px] xl:leading-[60px] py-5"
+              size="md:text-[48px] text-[24px]"
               color="text-[#F9FBF9] "
             />
             <DescriptionText
               text="Cephas Agro Link is an AI-powered agro-economic infrastructure platform transforming how agricultural stakeholders connect, trade, finance, and grow. We are creating a smarter, more transparent ecosystem that empowers farmers, businesses, and institutions to unlock the full potential of agriculture across Nigeria and West Africa."
               className="md:w-[645px] w-[358px]"
               color="text-[#F9FBF9]"
-              size="text-[18px]"
+              size="xl:text-[18px] md:text-[16px] text-[16px]"
             />
             <Button
               variant="secondary"

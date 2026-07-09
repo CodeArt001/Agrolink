@@ -15,8 +15,8 @@ const ValuePrep = () => {
         backgroundPosition: "center",
       }}
     >
-      <div className="w-full flex flex-col md:flex-row gap-12 lg:gap-16 xl:px-[6rem] md:px-[4rem] px-[1rem] items-center justify-between">
-        <div className="w-full md:w-[445px] flex-shrink-0 flex flex-col justify-center">
+      <div className="w-full flex flex-col xl:flex xl:flex-row md:flex-col gap-12 lg:gap-16 xl:px-[6rem] md:px-[4rem] px-[1rem] items-center justify-between">
+        <div className="w-full xl:w-[445px] md:w-full flex-shrink-0 flex flex-col justify-center">
           <TitleText
             text="Who We Are"
             color="text-[#0E7A3D]"

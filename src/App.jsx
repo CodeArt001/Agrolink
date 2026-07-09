@@ -9,6 +9,7 @@ import HeroSection from "./Components/Home/HeroSection";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer";
 import About from "./Screen/About";
+import Explore from "./Screen/Explore";
 // import HeroSection from "./Screen/HeroSection";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HeroSection />} />
         <Route path="/about-us" element={<About />} />
+        <Route path="/explore" element={<Explore />} />
       </Routes>
       <Footer />
     </>
