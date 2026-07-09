@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+  --font-outfit: "Outfit", sans-serif;
+}
+
+@keyframes slowBounce {
+  0%,
+  100% {
+    transform: translateY(-6%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* Changed duration to 2s so it is smooth and not too fast */
+.animate-slow-bounce {
+  animation: slowBounce 2s infinite;
+}
+
+/* This offsets the second card by exactly half the duration (1s) */
+.animation-delay-1000 {
+  animation-delay: 0.8s;
+}
