@@ -40,7 +40,6 @@ const ProductCard = () => {
           key={product.id}
           className="w-[345px] md:w-[calc(50%-12px)] xl:w-[calc(50%-12px)] h-[199px] md:h-[255px] shrink-0 bg-[#F5F7F4] shadow rounded-[24px] flex gap-4 border border-gray-200 relative overflow-hidden"
         >
-          {/* Left Column: Image Area */}
           <div className="w-[38%] md:w-[42%] xl:w-[45%] shrink-0 relative bg-white flex items-center justify-center">
             <span
               className={`absolute top-3 left-3 ${product.badgeColor} text-[#F9FBF9] text-[10px] uppercase font-bold tracking-wider px-3 py-1 rounded-[6px] z-10`}
@@ -54,17 +53,8 @@ const ProductCard = () => {
             />
           </div>
 
-          {/* Right Column: Details Area */}
-          {/* 
-            FIXED CUTTING COPY BUG HERE:
-            - Changed 'px-3' to 'pr-4 pl-0'. This adds a clean 16px internal padding wall on the right 
-              on mobile, stopping the texts and buttons from hitting the extreme edge and getting cut off.
-            - Added 'w-[calc(100%-8px)]' to the inner content structures to force text calculation layout limits.
-          */}
           <div className="w-[62%] md:w-[58%] xl:w-[55%] shrink-0 flex flex-col justify-between items-start py-3 md:py-5 pr-4 pl-0 md:px-5 md:pl-2">
-            {/* Top Info Block */}
             <div className="w-full flex flex-col items-start pr-1">
-              {/* Product Title */}
               <TitleText
                 text={product.title}
                 color="text-[#041B0E]"
@@ -72,7 +62,6 @@ const ProductCard = () => {
                 className="font-sans font-bold leading-tight w-full break-words"
               />
 
-              {/* Price Tag */}
               <div className="flex items-baseline gap-1 mt-1 md:mt-2">
                 <span className="text-[#0E7A3D] font-bold text-[15px] md:text-[18px]">
                   {product.price}
@@ -82,7 +71,6 @@ const ProductCard = () => {
                 </span>
               </div>
 
-              {/* Rating & Verification Row */}
               <div className="flex items-center gap-1 mt-0.5 md:mt-1.5 text-[11px] md:text-[13px]">
                 <span className="text-[#DAA545]">★</span>
                 <span className="font-bold text-[#041B0E]">
@@ -91,7 +79,6 @@ const ProductCard = () => {
                 <span className="text-gray-400 ml-1">{product.statusText}</span>
               </div>
 
-              {/* Short Description */}
               <DescriptionText
                 text={product.description}
                 color="text-[#041B0E]"
@@ -100,7 +87,6 @@ const ProductCard = () => {
               />
             </div>
 
-            {/* Left Aligned Action Button */}
             <Button
               variant="primary"
               text="Order"

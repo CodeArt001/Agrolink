@@ -29,11 +29,7 @@ const Category = () => {
         className="text-center font-sans font-semibold mb-8"
       />
 
-      {/* ========================================================
-          1. SMALL & MEDIUM SCREENS VIEWPORT (Hidden on large desktops)
-          Uses simple flex row with standard separation gaps. No calculation conflicts.
-         ======================================================== */}
-      <div className="w-full overflow-x-auto scrollbar-none px-4 md:px-16 xl:hidden">
+      <div className="w-full overflow-x-auto scrollbar-none px-4 md:px-6 xl:px-14 xl:hidden">
         <div className="flex flex-row gap-6 md:gap-10 pb-4 w-max">
           {catData.map((items, index) => (
             <div
@@ -58,10 +54,6 @@ const Category = () => {
         </div>
       </div>
 
-      {/* ========================================================
-          2. LARGE SCREENS ONLY VIEWPORT (Hidden on small/medium)
-          Your exact, original calculation grid code completely untouched.
-         ======================================================== */}
       <div className="w-full overflow-x-auto scrollbar-none px-16 hidden xl:block">
         <div
           className="grid grid-flow-col gap-10 pb-4 min-w-max"

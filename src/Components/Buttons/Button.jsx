@@ -14,7 +14,7 @@ const Button = (props) => {
   const variantStyles = (style) => {
     switch (style) {
       case "primary":
-        return `bg-[#0A4E29] text-white font-bold font-sans text-[13px] cursor-pointer`;
+        return `bg-[#0A4E29] text-white font-bold font-sans md:text-[13px] text-[10px] cursor-pointer`;
       case "secondary":
         return ` bg-[#DAA545] font-sans font-bold xl:text-[18px] text-[14px] cursor-pointer border-[#DAA545]`;
       case "tertiary":

@@ -3,6 +3,7 @@ import search from "../../assets/images/Vector.svg";
 import DescriptionText from "../Text/DescriptionText";
 import TitleText from "../Text/TitleText";
 import Category from "./Category";
+import FeaturedCommodities from "./FeaturedCommodities";
 import ProductCard from "./ProductCard";
 const HeroSection = () => {
   return (
@@ -46,8 +47,11 @@ Commodities"
       <div>
         <Category />
       </div>
-      <div className="xl:px-[4rem] md:px-[3rem] px-[1rem]">
+      <div className="xl:px-[4rem] md:px-[1rem] px-[0.80rem]">
         <ProductCard />
+      </div>
+      <div>
+        <FeaturedCommodities />
       </div>
     </div>
   );
