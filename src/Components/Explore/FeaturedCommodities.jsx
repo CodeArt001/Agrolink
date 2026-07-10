@@ -6,7 +6,7 @@ import palm from "../../assets/images/plm.svg";
 import cock from "../../assets/images/hen.svg";
 import TitleText from "../Text/TitleText";
 import DescriptionText from "../Text/DescriptionText";
-import location from "../../assets/images/container.svg";
+import location from "../../assets/images/Container.svg";
 import icon from "../../assets/images/Icone.svg";
 import Button from "../Buttons/Button";
 

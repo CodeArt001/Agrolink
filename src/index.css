@@ -21,7 +21,7 @@
 
 /* Changed duration to 2s so it is smooth and not too fast */
 .animate-slow-bounce {
-  animation: slowBounce 2s infinite;
+  animation: slowBounce 1s infinite;
 }
 
 /* This offsets the second card by exactly half the duration (1s) */

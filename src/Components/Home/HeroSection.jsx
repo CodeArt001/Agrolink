@@ -3,14 +3,25 @@ import Button from "../Buttons/Button";
 import DescriptionText from "../Text/DescriptionText";
 import TitleText from "../Text/TitleText";
 import HeroImage from "../../assets/images/Rectangle7.svg";
+import hand from "../../assets/images/hand.svg";
 import StatSection from "./StatSection";
 import ExistSection from "./ExistSection";
 import About from "./About";
 import Card from "./Card";
 import Faqs from "./Faqs";
 import arrow from "../../assets/images/arrow.svg";
+import { useEffect, useState } from "react";
 
+const heroImages = [HeroImage, hand];
 const HeroSection = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+    }, 20000);
+    return () => clearInterval(interval);
+  }, []);
   return (
     <>
       <div>
@@ -20,7 +31,6 @@ const HeroSection = () => {
             backgroundImage: `url(${dotted})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            // height: "xl:h-[650px] md:h-[400px] h-[800px]",
           }}
         >
           <div className="absolute z-10 xl:px-[6rem] px-[1rem] xl:mt-[10rem] md:mt-[8rem] mt-[0.80em] xl:flex xl:flex-row md:flex md:flex-row flex flex-col items-center gap-8 w-full">
@@ -63,12 +73,18 @@ const HeroSection = () => {
                 className="mt-6"
               />
             </div>
-            <div className="w-full relative">
-              <img
-                src={HeroImage}
-                alt="Hero Image"
-                className="w-full xl:h-[491px]  object-cover rounded-[1rem]"
-              />
+            <div className="w-full relative xl:h-[491px] h-[300px] rounded-[1rem] overflow-hidden">
+              {heroImages.map((img, index) => (
+                <img
+                  key={index}
+                  src={img}
+                  alt="Hero"
+                  className={`w-full h-full object-cover rounded-[1rem] absolute inset-0 z-0 transition-opacity duration-1000 ${
+                    index === currentIndex ? "opacity-100" : "opacity-0"
+                  }`}
+                />
+              ))}
+              <div className="absolute inset-0 bg-[#00193C]/30  z-10" />
               <div className="absolute xl:bottom-10 md:bottom-8 bottom-3 z-10 xl:left-8 left-4 md:left-6 animate-slow-bounce ">
                 <div className="w-[167px] h-[116px] bg-[#F9FBF942] border-[#F9FBF942]  rounded-2xl border-3 border-t-[#0E7A3D] px-2 flex flex-col justify-center">
                   <div className="flex gap-3 justify-center items-center ">
@@ -131,6 +147,7 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
+
         <div className="xl:px-[8rem] md:px-[4rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[19rem]">
           <StatSection />
         </div>
