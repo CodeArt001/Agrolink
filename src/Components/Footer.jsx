@@ -4,7 +4,7 @@ import TitleText from "./Text/TitleText";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#005F2D] w-full xl:h-[378px] h-auto">
+    <footer className="bg-[#005F2D] w-full xl:h-[378px] ">
       <div className="flex flex-col xl:flex-row md:flex-col justify-between xl:px-[6rem] md:px-[4rem] px-[1rem] py-12 gap-10 xl:gap-0 md:gap-10">
         <div>
           <TitleText
