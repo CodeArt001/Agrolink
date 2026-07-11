@@ -17,7 +17,7 @@ const Navbar = () => {
       <>
         <div>
           {/* MAIN NAV BAR */}
-          <div className="flex justify-between items-center xl:px-[6rem] md:px-[3rem] px-[2rem] bg-white shadow py-4 ">
+          <div className="flex justify-between  items-center xl:px-[4rem] md:px-[3rem] px-[2rem] bg-white shadow py-4 ">
             <button
               onClick={() => setIsOpen(true)}
               className="text-3xl md:hidden"

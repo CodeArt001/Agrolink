@@ -1,4 +1,16 @@
 import star from "../../assets/images/Icon.svg";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.15 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
 const Card = () => {
   const cardData = [
     {
@@ -24,9 +36,16 @@ const Card = () => {
     },
   ];
   return (
-    <div className="flex gap-8 xl:px-[6rem] md:px-[2rem] px-[1rem] w-full overflow-x-auto  xl:overflow-x-visible">
+    <motion.div
+      variants={container}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: false, amount: 0.2 }}
+      className="flex gap-8 xl:px-[4rem] md:px-[2rem] px-[1rem] w-full overflow-x-auto  xl:overflow-x-visible"
+    >
       {cardData.map((item, index) => (
-        <div
+        <motion.div
+          variants={fadeUp}
           key={index}
           className="bg-[#F1F5F1] p-4 rounded-lg shadow-md  mb-4 h-[312px] shrink-0 xl:shrink  w-[280px] xl:w-full md:w-[320px]"
         >
@@ -49,9 +68,9 @@ const Card = () => {
             </h3>
             <p className="text-[#6F7A6E] text-[16px]">{item.role}</p>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

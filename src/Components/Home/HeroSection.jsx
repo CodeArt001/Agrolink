@@ -11,17 +11,38 @@ import Card from "./Card";
 import Faqs from "./Faqs";
 import arrow from "../../assets/images/arrow.svg";
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const heroImages = [HeroImage, hand];
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
+const highlightWord = {
+  hidden: { opacity: 0, scale: 0.9 },
+  show: {
+    opacity: 1,
+    scale: 1,
+    transition: { duration: 0.6, ease: "easeOut", delay: 0.15 },
+  },
+};
+
 const HeroSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % heroImages.length);
-    }, 20000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
+
   return (
     <>
       <div>
@@ -33,46 +54,65 @@ const HeroSection = () => {
             backgroundPosition: "center",
           }}
         >
-          <div className="absolute z-10 xl:px-[6rem] px-[1rem] xl:mt-[10rem] md:mt-[8rem] mt-[0.80em] xl:flex xl:flex-row md:flex md:flex-row flex flex-col items-center gap-8 w-full">
-            <div className="w-full">
-              <span className="bg-[#2D6A421A]  border-none flex justify-center  items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5">
+          <div className="absolute z-10 xl:px-[4rem] px-[1rem] xl:mt-[10rem] md:mt-[8rem] mt-[7rem] xl:flex xl:flex-row md:flex md:flex-row flex flex-col items-center gap-8 w-full">
+            <motion.div
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              className="w-full"
+            >
+              <motion.span
+                variants={fadeUp}
+                className="bg-[#2D6A421A] border-none flex justify-center items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5"
+              >
                 <TitleText
                   text="AI-First infrastructure"
                   color="text-[#2D6A42]"
                   fontWeight="font-bold"
-                  className=" text-[14px] font-sans text-center "
+                  className="text-[14px] font-sans text-center"
                 />
-              </span>
-              <TitleText
-                text={
-                  <>
-                    Building the Digital Infrastructure for Africa's{" "}
-                    <span className="bg-gradient-to-r from-[#005F2D] from-3% to-[#6E4C00] bg-clip-text text-transparent">
-                      Agro-Economy
-                    </span>
-                  </>
-                }
-                color="text-[#041B0E]"
-                size="xl:text-[60px] text-[31px]"
-                className="font-sans font-bold mt-8 xl:leading-[65px] xl:w-[800px] w-[358px]"
-              />
+              </motion.span>
 
-              <DescriptionText
-                text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
-                size="text-[14px] xl:text-[18px]"
-                color="text-[#041B0E]"
-                className="font-inter mt-4 xl:w-[540px]"
-              />
-              <Button
-                variant="primary"
-                text="Get Started"
-                paddingTB="py-[0.80rem]"
-                paddingRL="px-10"
-                borderRadius="rounded-[1rem]"
-                borderColor="#00193C"
-                className="mt-6"
-              />
-            </div>
+              <motion.div variants={fadeUp}>
+                <TitleText
+                  text={
+                    <>
+                      Building the Digital Infrastructure for Africa's{" "}
+                      <motion.span
+                        variants={highlightWord}
+                        className="inline-block bg-gradient-to-r from-[#005F2D] from-3% to-[#6E4C00] bg-clip-text text-transparent"
+                      >
+                        Agro-Economy
+                      </motion.span>
+                    </>
+                  }
+                  color="text-[#041B0E]"
+                  size="xl:text-[60px] text-[31px]"
+                  className="font-sans font-bold mt-8 xl:leading-[65px] xl:w-[800px] w-[358px]"
+                />
+              </motion.div>
+
+              <motion.div variants={fadeUp}>
+                <DescriptionText
+                  text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
+                  size="text-[14px] xl:text-[18px]"
+                  color="text-[#041B0E]"
+                  className="font-inter mt-4 xl:w-[540px]"
+                />
+              </motion.div>
+
+              <motion.div variants={fadeUp}>
+                <Button
+                  variant="primary"
+                  text="Get Started"
+                  paddingTB="py-[0.80rem]"
+                  paddingRL="px-10"
+                  borderRadius="rounded-[1rem]"
+                  borderColor="#00193C"
+                  className="mt-6"
+                />
+              </motion.div>
+            </motion.div>
             <div className="w-full relative xl:h-[491px] h-[300px] rounded-[1rem] overflow-hidden">
               {heroImages.map((img, index) => (
                 <img
@@ -84,7 +124,7 @@ const HeroSection = () => {
                   }`}
                 />
               ))}
-              <div className="absolute inset-0 bg-[#00193C]/30  z-10" />
+              <div className="absolute inset-0 bg-[#00193C]/20  z-10" />
               <div className="absolute xl:bottom-10 md:bottom-8 bottom-3 z-10 xl:left-8 left-4 md:left-6 animate-slow-bounce ">
                 <div className="w-[167px] h-[116px] bg-[#F9FBF942] border-[#F9FBF942]  rounded-2xl border-3 border-t-[#0E7A3D] px-2 flex flex-col justify-center">
                   <div className="flex gap-3 justify-center items-center ">
@@ -148,7 +188,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="xl:px-[8rem] md:px-[4rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[19rem]">
+        <div className="xl:px-[4rem] md:px-[3rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[19rem]">
           <StatSection />
         </div>
         <div className="">
