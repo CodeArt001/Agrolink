@@ -79,7 +79,7 @@ const FeaturedCommodities = () => {
       {featureCard.map((cards, index) => (
         <div
           key={index}
-          className="bg-[#F1F5F1] shadow rounded-lg w-full xl:h-[423px] overflow-hidden"
+          className="bg-[#F1F5F1] shadow rounded-lg w-full xl:h-[423px] overflow-hidden animate-fade-up opacity-0"
         >
           <img
             src={cards.image}

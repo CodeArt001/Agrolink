@@ -58,7 +58,7 @@ const StakeHoldersGrid = () => {
       title: "Government & Development Partners",
       desc: "Leverage reliable agricultural data and insights to support policy development and sector growth.",
       isComingSoon: true,
-      bgColor: "bg-[#F4F1EA]", // Warm beige background
+      bgColor: "bg-[#F4F1EA]",
     },
   ];
 

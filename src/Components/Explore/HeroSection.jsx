@@ -13,7 +13,7 @@ const HeroSection = () => {
           style={{
             backgroundImage:
               "radial-gradient(circle, rgba(255,255,255,0.09) 2px, transparent 1px)",
-            backgroundSize: "26px 26px", // adjust to taste — spacing between dots
+            backgroundSize: "26px 26px",
           }}
         >
           <div className="flex flex-col items-center justify-center md:pt-[6rem] pt-[3rem]">
@@ -22,15 +22,15 @@ const HeroSection = () => {
               Commodities"
               size="md:text-[46px] text-[31px]"
               color="text-[#DAA545]"
-              className="xl:w-[604px] md:w-[604px] w-[356px] font-semibold text-center xl:leading-[1.2] md:leading-[1.2]"
+              className="xl:w-[604px] md:w-[604px] w-[356px] font-semibold text-center xl:leading-[1.2] md:leading-[1.2] animate-fade-up opacity-0"
             />
             <DescriptionText
               text="Browse verified agricultural products directly from trusted farmers and suppliers. Discover premium cocoa, cashew, grains, spices, livestock, and more with transparent pricing and reliable sourcing."
               size="md:text-[18px] text-[16px]"
               color="text-[#F9FBF9]"
-              className="xl:w-[650px] md:w-[650px] w-[356px] text-center py-3"
+              className="xl:w-[650px] md:w-[650px] w-[356px] text-center py-3 animate-fade-up opacity-0 [animation-delay:150ms]"
             />
-            <div>
+            <div className="animate-fade-up opacity-0 [animation-delay:300ms]">
               <span className="relative flex left-0">
                 <input
                   type="text"

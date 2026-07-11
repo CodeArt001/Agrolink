@@ -19,12 +19,25 @@
   }
 }
 
-/* Changed duration to 2s so it is smooth and not too fast */
 .animate-slow-bounce {
   animation: slowBounce 1s infinite;
 }
 
-/* This offsets the second card by exactly half the duration (1s) */
 .animation-delay-1000 {
   animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.6s ease-out forwards;
 }
