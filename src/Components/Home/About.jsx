@@ -33,7 +33,7 @@ const About = () => {
         variants={container}
         initial="hidden"
         whileInView="show"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: false, amount: 0.3 }}
         className="absolute z-10 flex flex-col xl:flex xl:flex-row md:flex md:flex-col xl:gap-6 md:gap-14  items-center w-full xl:px-[4rem] md:px-[3rem] px-[1rem] xl:mt-[8rem] mt-[4rem]"
       >
         <div className="w-full xl:w-2/5 shrink-0">

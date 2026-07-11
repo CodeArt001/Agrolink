@@ -6,6 +6,18 @@ import ServiceGrid from "./ServiceGrid";
 import StakeHoldersGrid from "./StakeHoldersGrid";
 import Start from "./Start";
 import ValuePrep from "./ValuePrep";
+import { motion } from "framer-motion";
+
+const container = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.1 } },
+};
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
 const Herosection = () => {
   return (
     <div className="w-full">
@@ -28,28 +40,41 @@ const Herosection = () => {
       transparent 100%)`,
           }}
         />
-        <div className="absolute z-10 md:pt-[9rem] pt-[7rem] xl:px-[6rem] md:px-[4rem] px-[1rem]">
-          <span className="bg-[#F9FBF917] border-none flex justify-center items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5">
+        <motion.div
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: false, amount: 0.3 }}
+          className="absolute z-10 md:pt-[9rem] pt-[7rem] xl:px-[4rem] md:px-[3rem] px-[1rem]"
+        >
+          <motion.span
+            variants={fadeUp}
+            className="bg-[#F9FBF917] border-none flex justify-center items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5"
+          >
             <TitleText
               text="AI-First infrastructure"
               color="text-[#F9FBF9]"
               fontWeight="font-bold"
               className=" text-[14px] font-sans text-center "
             />
-          </span>
+          </motion.span>
           <div>
-            <TitleText
-              text="Building the Digital Infrastructure for Africa's Agro-Economy"
-              className="md:w-[652px] w-[358px] xl:leading-[60px] py-5"
-              size="md:text-[48px] text-[24px]"
-              color="text-[#F9FBF9] "
-            />
-            <DescriptionText
-              text="Cephas Agro Link is an AI-powered agro-economic infrastructure platform transforming how agricultural stakeholders connect, trade, finance, and grow. We are creating a smarter, more transparent ecosystem that empowers farmers, businesses, and institutions to unlock the full potential of agriculture across Nigeria and West Africa."
-              className="md:w-[645px] w-[358px]"
-              color="text-[#F9FBF9]"
-              size="xl:text-[18px] md:text-[16px] text-[16px]"
-            />
+            <motion.div variants={fadeUp}>
+              <TitleText
+                text="Building the Digital Infrastructure for Africa's Agro-Economy"
+                className="md:w-[652px] w-[358px] xl:leading-[60px] py-5"
+                size="md:text-[48px] text-[24px]"
+                color="text-[#F9FBF9] "
+              />
+            </motion.div>
+            <motion.div variants={fadeUp}>
+              <DescriptionText
+                text="Cephas Agro Link is an AI-powered agro-economic infrastructure platform transforming how agricultural stakeholders connect, trade, finance, and grow. We are creating a smarter, more transparent ecosystem that empowers farmers, businesses, and institutions to unlock the full potential of agriculture across Nigeria and West Africa."
+                className="md:w-[645px] w-[358px]"
+                color="text-[#F9FBF9]"
+                size="xl:text-[18px] md:text-[16px] text-[16px]"
+              />
+            </motion.div>
             <Button
               variant="secondary"
               text="Explore"
@@ -60,7 +85,7 @@ const Herosection = () => {
               className="mt-6"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
       <div className="w-full">
         <ValuePrep />
