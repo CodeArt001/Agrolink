@@ -71,11 +71,11 @@ const StakeHoldersGrid = () => {
         viewport={{ once: false, amount: 0.2 }}
         className="w-full xl:px-[4rem] md:px-[3rem] px-[1rem] mx-auto flex flex-col items-center"
       >
-        <div className="text-center mb-12 md:mb-16 max-w-[600px] px-4">
-          <span className="text-[#0E7A3D] font-bold font-sans text-[14px] md:text-[16px] tracking-wide block mb-3">
+        <div className="text-center mb-12 md:mb-16 md:max-w-[600px] w-full px-4">
+          <span className="text-[#0E7A3D] font-bold font-sans text-[16px] md:text-[16px] tracking-wide block mb-3">
             Who We Serve
           </span>
-          <h2 className="text-[#041B0E] font-bold font-sans xl:text-[32px] md:text-[40px] text-[16px] leading-[1.2] tracking-tight">
+          <h2 className="text-[#041B0E] font-bold font-sans xl:text-[32px] md:text-[40px] text-[25px] leading-[1.2] tracking-tight whitespace-nowrap">
             Connecting Every Stakeholder
           </h2>
         </div>

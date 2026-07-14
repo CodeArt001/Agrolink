@@ -26,7 +26,7 @@ const Category = () => {
         text="Shop by Category"
         color="text-[#0A4E29]"
         size="text-[25px]"
-        className="text-center font-sans font-semibold mb-8"
+        className="text-center font-sans font-bold mb-8"
       />
 
       <div className="w-full overflow-x-auto scrollbar-none px-4 md:px-6 xl:px-14 xl:hidden">

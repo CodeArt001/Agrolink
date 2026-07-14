@@ -88,16 +88,16 @@ const HeroSection = () => {
                   }
                   color="text-[#041B0E]"
                   size="xl:text-[60px] text-[31px]"
-                  className="font-sans font-bold mt-8 xl:leading-[65px] xl:w-[800px] w-[358px]"
+                  className="font-sans font-bold mt-8 xl:leading-[65px] xl:w-[800px] w-full"
                 />
               </motion.div>
 
               <motion.div variants={fadeUp}>
                 <DescriptionText
                   text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
-                  size="text-[14px] xl:text-[18px]"
+                  size="text-[16px] xl:text-[18px]"
                   color="text-[#041B0E]"
-                  className="font-inter mt-4 xl:w-[540px]"
+                  className="font-inter mt-4 xl:w-[540px] md:w-[350px] w-full"
                 />
               </motion.div>
 
@@ -105,9 +105,9 @@ const HeroSection = () => {
                 <Button
                   variant="primary"
                   text="Get Started"
-                  paddingTB="py-[0.80rem]"
+                  paddingTB="py-[1rem]"
                   paddingRL="px-10"
-                  borderRadius="rounded-[1rem]"
+                  borderRadius="rounded-[0.80rem]"
                   borderColor="#00193C"
                   className="mt-6"
                 />
@@ -188,7 +188,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        <div className="xl:px-[4rem] md:px-[3rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[19rem]">
+        <div className="xl:px-[4rem] md:px-[3rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[20rem]">
           <StatSection />
         </div>
         <div className="">
@@ -197,10 +197,10 @@ const HeroSection = () => {
         <div>
           <About />
         </div>
-        <div className="xl:mt-[6rem] md:mt-[16rem] mt-[12rem]">
+        <div className="xl:mt-[6rem] md:mt-[22rem] mt-[12rem]">
           <Card />
         </div>
-        <div className="xl:px-[18rem] md:px-[8rem] px-[1rem] xl:mt-[6rem] mt-[3rem] xl:pb-[7rem] pb-[4rem] md:pb-[4rem]">
+        <div className="xl:px-[18rem] md:px-[6rem] px-[1rem] xl:mt-[6rem] md:mt-[6rem] mt-[5rem] xl:pb-[7rem] pb-[4rem] md:pb-[4rem]">
           <Faqs />
         </div>
       </div>

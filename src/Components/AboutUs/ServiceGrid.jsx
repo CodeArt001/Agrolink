@@ -47,9 +47,9 @@ const ServiceGrid = () => {
         <TitleText
           text="Solving Agriculture's Biggest Challenges"
           color="text-[#041B0E]"
-          size="text-[28px] md:text-[36px]"
+          size="text-[25px] md:text-[36px]"
           fontWeight="font-bold"
-          className="py-2"
+          className="py-2 md:w-full w-[264px]"
         />
 
         <DescriptionText

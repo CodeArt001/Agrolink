@@ -41,13 +41,13 @@ const Card = () => {
       initial="hidden"
       whileInView="show"
       viewport={{ once: false, amount: 0.2 }}
-      className="flex gap-8 xl:px-[4rem] md:px-[2rem] px-[1rem] w-full overflow-x-auto  xl:overflow-x-visible"
+      className="flex flex-col md:flex-row gap-8 xl:px-[4rem] md:px-[2rem] px-[1rem] w-full overflow-hidden xl:overflow-visible"
     >
       {cardData.map((item, index) => (
         <motion.div
           variants={fadeUp}
           key={index}
-          className="bg-[#F1F5F1] p-4 rounded-lg shadow-md  mb-4 h-[312px] shrink-0 xl:shrink  w-[280px] xl:w-full md:w-[320px]"
+          className="bg-[#F1F5F1] p-4 rounded-lg shadow-md mb-4 md:h-[312px] xl:shrink w-full md:w-[50%] xl:w-full"
         >
           <div className="flex gap-2 mb-2 mt-8">
             {Array.from({ length: 5 }).map((_, starIndex) => (

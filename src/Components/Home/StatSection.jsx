@@ -50,7 +50,7 @@ const StatSection = () => {
         hidden: {},
         show: { transition: { staggerChildren: 0.15 } },
       }}
-      className="flex flex-row md:grid md:grid-cols-4 items-center xl:gap-[14rem] md:gap-[7rem] gap-[4rem] overflow-x-auto xl:overflow-x-visible md:overflow-visible no-scrollbar scroll-smooth w-full py-4"
+      className="flex md:grid md:grid-cols-4 items-center overflow-x-auto md:overflow-visible xl:gap-[14rem] md:gap-[7rem] gap-[2rem] md:gap-[4rem] w-full py-4 no-scrollbar"
     >
       {stats.map((stat) => (
         <motion.span
@@ -59,7 +59,7 @@ const StatSection = () => {
             hidden: { opacity: 0, y: 20 },
             show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
           }}
-          className="flex flex-col items-center"
+          className="flex flex-col items-center shrink-0 md:shrink"
         >
           <TitleText
             text={

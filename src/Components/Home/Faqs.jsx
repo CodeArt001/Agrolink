@@ -1,4 +1,5 @@
 import { useState } from "react";
+import TitleText from "../Text/TitleText";
 
 const Faqs = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -39,6 +40,12 @@ const Faqs = () => {
   ];
   return (
     <div className="flex flex-col gap-6">
+      <TitleText
+        text="Frequently Asked Questions"
+        color="text-[#041B0E]"
+        size="text-[25px] md:text-[32px]"
+        className="text-center mb-4 font-semibold"
+      />
       {FAQS.map((items, index) => {
         const isOpen = openIndex === index;
         return (

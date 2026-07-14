@@ -22,22 +22,26 @@ const HeroSection = () => {
               Commodities"
               size="md:text-[46px] text-[31px]"
               color="text-[#DAA545]"
-              className="xl:w-[604px] md:w-[604px] w-[356px] font-semibold text-center xl:leading-[1.2] md:leading-[1.2] animate-fade-up opacity-0"
+              className="xl:w-[604px] md:w-[604px] w-full font-semibold text-center xl:leading-[1.2] md:leading-[1.2] animate-fade-up opacity-0 px-4"
             />
             <DescriptionText
               text="Browse verified agricultural products directly from trusted farmers and suppliers. Discover premium cocoa, cashew, grains, spices, livestock, and more with transparent pricing and reliable sourcing."
               size="md:text-[18px] text-[16px]"
               color="text-[#F9FBF9]"
-              className="xl:w-[650px] md:w-[650px] w-[356px] text-center py-3 animate-fade-up opacity-0 [animation-delay:150ms]"
+              className="xl:w-[650px] md:w-[650px] w-full text-center py-3 animate-fade-up opacity-0 [animation-delay:150ms] px-4"
             />
-            <div className="animate-fade-up opacity-0 [animation-delay:300ms]">
-              <span className="relative flex left-0">
+            <div className="animate-fade-up opacity-0 [animation-delay:300ms] w-full px-4">
+              <span className="relative flex items-center justify-center">
                 <input
                   type="text"
                   placeholder="search"
-                  className="placeholder:text-[#F9FBF9] border border-white/30 bg-[#1C3125] xl:w-[696px] md:w-[600px] w-[356px] py-5 rounded-2xl pl-18 text-white mt-2"
+                  className="placeholder:text-[#F9FBF9] border border-white/30 bg-[#1C3125] xl:w-[696px] md:w-[600px] w-full py-5 rounded-2xl pl-18 text-white mt-2"
                 />
-                <img src={search} alt="" className="absolute mt-7 left-8" />
+                <img
+                  src={search}
+                  alt=""
+                  className="absolute mt-2 left-[26rem]"
+                />
               </span>
             </div>
           </div>

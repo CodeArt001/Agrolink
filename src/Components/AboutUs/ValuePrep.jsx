@@ -41,11 +41,11 @@ const ValuePrep = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.2 }}
-        className="w-full flex flex-col xl:flex xl:flex-row md:flex-col gap-12 lg:gap-16 xl:px-[4rem] md:px-[3rem] px-[1rem] items-center justify-between"
+        className="w-full flex flex-col xl:flex xl:flex-row md:flex-col gap-12 lg:gap-16 xl:px-[4rem] md:px-[3rem] px-[1rem] items-center justify-between xl:text-start text-center"
       >
         <motion.div
           variants={slideFromLeft}
-          className="w-full xl:w-[445px] md:w-full flex-shrink-0 flex flex-col justify-center"
+          className="w-full xl:w-[445px] md:w-full flex-shrink-0 flex flex-col justify-center px-4"
         >
           <motion.div variants={fadeUp}>
             <TitleText
@@ -59,16 +59,16 @@ const ValuePrep = () => {
             <TitleText
               text="Driving the Future of Agriculture Through Technology"
               color="text-[#041B0E]"
-              size="text-[36px]"
+              size="md:text-[36px] text-[25px]"
               fontWeight="font-bold"
-              className="leading-[44px] py-4"
+              className="md:leading-[44px] py-4"
             />
           </motion.div>
           <motion.div variants={fadeUp}>
             <DescriptionText
               text="Agriculture is one of the largest contributors to economic growth and employment across Africa. Yet, millions of farmers and agribusinesses continue to face challenges that limit productivity, reduce profitability, and restrict access to opportunities."
               className="leading-[28px]"
-              size="text-[16px]"
+              size="xl:text-[16px] text-[13px]"
               color="text-[#041B0E]"
             />
           </motion.div>
@@ -76,7 +76,7 @@ const ValuePrep = () => {
             <DescriptionText
               text="More than just a farming application, Cephas Agro Link serves as the digital backbone of the agro-economy, enabling collaboration between farmers, buyers, financial institutions, warehouses, logistics providers, processors, and export markets."
               className="leading-[28px] mt-4"
-              size="text-[16px]"
+              size="md:text-[16px] text-[13px]"
               color="text-[#041B0E]"
             />
           </motion.div>

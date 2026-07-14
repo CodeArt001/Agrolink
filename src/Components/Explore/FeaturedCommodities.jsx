@@ -75,7 +75,7 @@ const FeaturedCommodities = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-3 xl:px-[4rem] md:px-[1rem] px-[0.80rem]  xl:pt-14 pt-8 md:pt-10 xl:pb-18 md:pb-14 pb-10">
+    <div className="grid grid-cols-2 md:grid-cols-3 md:gap-6 gap-3 xl:px-[4rem] md:px-[1rem] px-[0.80rem] w-full xl:pt-14 pt-8 md:pt-10 xl:pb-18 md:pb-14 pb-10">
       {featureCard.map((cards, index) => (
         <div
           key={index}

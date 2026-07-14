@@ -25,7 +25,7 @@ const GetInTouch = () => {
           />
           <DescriptionText
             text="Lorem ipsum dolor sit amet consectetur. Ornare id vitae ultrices orci aliquam aliquam. Sed ut placeida enim purus non. Hac justo int"
-            className="md:w-[476px] w-[358px]"
+            className="md:w-[476px] w-full px-2"
             color="text-[#041B0E]"
             size="text-[16px]"
           />

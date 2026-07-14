@@ -39,15 +39,15 @@ const ExistSection = () => {
         <TitleText
           text="Solving Agriculture's Biggest Challenges"
           color="text-[#041B0E]"
-          size="xl:text-[32px] md:text-[24px] text-[14px]"
-          className="font-sans font-semibold"
+          size="xl:text-[32px] md:text-[25px] text-[25px]"
+          className="font-sans font-bold md:w-full w-[300px] px-4"
         />
 
         <DescriptionText
           text="Agriculture remains one of Africa's largest economic sectors, yet millions of farmers continue to face barriers that reduce productivity, profitability, and access to markets. Our platform eliminates these barriers by digitizing every stage of the agricultural value chain."
-          size="text-[16px]"
+          size="md:text-[16px] text-[13px]"
           color="text-[#041B0E]"
-          className="font-sans text-center xl:w-[660px]"
+          className="font-sans text-center xl:w-[660px] md:w-[660px] w-full px-4"
         />
       </span>
       <motion.div

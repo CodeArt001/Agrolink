@@ -61,16 +61,16 @@ const Herosection = () => {
           <div>
             <motion.div variants={fadeUp}>
               <TitleText
-                text="Building the Digital Infrastructure for Africa's Agro-Economy"
-                className="md:w-[652px] w-[358px] xl:leading-[60px] py-5"
-                size="md:text-[48px] text-[24px]"
+                text="Building the Digital Infrastructure for Africa's "
+                className="md:w-[652px] w-full xl:leading-[60px] py-5 font-semibold px-2"
+                size="md:text-[48px] text-[31px]"
                 color="text-[#F9FBF9] "
               />
             </motion.div>
             <motion.div variants={fadeUp}>
               <DescriptionText
                 text="Cephas Agro Link is an AI-powered agro-economic infrastructure platform transforming how agricultural stakeholders connect, trade, finance, and grow. We are creating a smarter, more transparent ecosystem that empowers farmers, businesses, and institutions to unlock the full potential of agriculture across Nigeria and West Africa."
-                className="md:w-[645px] w-[358px]"
+                className="md:w-[645px] w-full px-2"
                 color="text-[#F9FBF9]"
                 size="xl:text-[18px] md:text-[16px] text-[16px]"
               />
