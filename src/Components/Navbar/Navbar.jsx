@@ -1,6 +1,6 @@
 import { useState } from "react";
 import TitleText from "../Text/TitleText";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Button from "../Buttons/Button";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 
@@ -24,12 +24,14 @@ const Navbar = () => {
             >
               <HiMenuAlt3 />
             </button>
-            <TitleText
-              text="Agrolink"
-              size={`xl:text-[24px] md:text-[20px] text-[14px] `}
-              color="text-[#0A4E29]"
-              className="font-sans font-semibold xl:flex md:flex hidden"
-            />
+            <Link to="/">
+              <TitleText
+                text="Agrolink"
+                size={`xl:text-[24px] md:text-[20px] text-[14px] `}
+                color="text-[#0A4E29]"
+                className="font-sans font-semibold xl:flex md:flex hidden cursor-pointer"
+              />
+            </Link>
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-12 items-center text-[16px] font-sans ">

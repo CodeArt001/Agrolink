@@ -13,7 +13,22 @@ import arrow from "../../assets/images/arrow.svg";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const heroImages = [HeroImage, hand];
+// Bundle images with their respective data
+const heroSlides = [
+  {
+    img: hand,
+    crop: "Cocoa",
+    price: "$4,240",
+    change: "+12.4% vs last week",
+  },
+  {
+    img: HeroImage,
+    crop: "Cashew",
+    price: "$3,000",
+    change: "+8.2% vs last week",
+  },
+];
+
 const container = {
   hidden: {},
   show: { transition: { staggerChildren: 0.1 } },
@@ -38,10 +53,12 @@ const HeroSection = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % heroImages.length);
+      setCurrentIndex((prev) => (prev + 1) % heroSlides.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
+
+  const activeSlide = heroSlides[currentIndex];
 
   return (
     <>
@@ -88,7 +105,7 @@ const HeroSection = () => {
                   }
                   color="text-[#041B0E]"
                   size="xl:text-[60px] text-[31px]"
-                  className="font-sans font-bold mt-8 xl:leading-[65px] xl:w-[800px] w-full"
+                  className="font-sans font-bold mt-8 xl:leading-[65px] leading-[40px] xl:w-[800px] w-full"
                 />
               </motion.div>
 
@@ -113,71 +130,77 @@ const HeroSection = () => {
                 />
               </motion.div>
             </motion.div>
+
+            {/* Image & Price Card Section */}
             <div className="w-full relative xl:h-[491px] h-[300px] rounded-[1rem] overflow-hidden">
-              {heroImages.map((img, index) => (
+              {heroSlides.map((slide, index) => (
                 <img
                   key={index}
-                  src={img}
+                  src={slide.img}
                   alt="Hero"
                   className={`w-full h-full object-cover rounded-[1rem] absolute inset-0 z-0 transition-opacity duration-1000 ${
                     index === currentIndex ? "opacity-100" : "opacity-0"
                   }`}
                 />
               ))}
-              <div className="absolute inset-0 bg-[#00193C]/20  z-10" />
-              <div className="absolute xl:bottom-10 md:bottom-8 bottom-3 z-10 xl:left-8 left-4 md:left-6 animate-slow-bounce ">
-                <div className="w-[167px] h-[116px] bg-[#F9FBF942] border-[#F9FBF942]  rounded-2xl border-3 border-t-[#0E7A3D] px-2 flex flex-col justify-center">
-                  <div className="flex gap-3 justify-center items-center ">
+              <div className="absolute inset-0 bg-[#00193C]/20 z-10" />
+
+              {/* Bottom Floating Card */}
+              <div className="absolute xl:bottom-10 md:bottom-8 bottom-3 z-10 xl:left-8 left-4 md:left-6 animate-slow-bounce">
+                <div className="w-[167px] h-[116px] bg-[#F9FBF942] border-[#F9FBF942] rounded-2xl border-3 border-t-[#0E7A3D] px-2 flex flex-col justify-center backdrop-blur-sm">
+                  <div className="flex gap-3 justify-center items-center">
                     <span className="text-center justify-center border flex items-center rounded-full w-[42px] h-[42px] border-[#DAA545] bg-[#DAA545]">
-                      <img src={arrow} alt="" />
+                      <img src={arrow} alt="arrow" />
                     </span>
                     <span>
                       <TitleText
                         text={
                           <>
-                            Cocoa: <br />
-                            $4,240
+                            {activeSlide.crop}: <br />
+                            {activeSlide.price}
                           </>
                         }
                         fontWeight="font-semibold"
                         color="text-[#F9FBF9]"
-                        className="text-[18px]"
+                        className="text-[18px] transition-all duration-500"
                       />
                     </span>
                   </div>
                   <DescriptionText
-                    text="+12.4% vs last week"
+                    text={activeSlide.change}
                     size="text-[13px]"
                     color="text-[#F9FBF9]"
                     className="px-2 mt-2"
                   />
                 </div>
               </div>
+
+              {/* Top Floating Card */}
               <div
                 className="absolute xl:top-10 top-5 md:top-8 z-10 xl:right-8 md:right-6 right-4 animate-slow-bounce"
                 style={{ animationDelay: "-0.5s" }}
               >
-                <div className="w-[167px] h-[116px] bg-[#F9FBF942] border-[#F9FBF942] rounded-2xl border-3 border-t-[#0E7A3D] px-2 flex flex-col justify-center">
-                  <div className="flex gap-3 justify-center items-center ">
+                <div className="w-[167px] h-[116px] bg-[#F9FBF942] border-[#F9FBF942] rounded-2xl border-3 border-t-[#0E7A3D] px-2 flex flex-col justify-center backdrop-blur-sm">
+                  <div className="flex gap-3 justify-center items-center">
                     <span className="text-center justify-center border flex items-center rounded-full w-[42px] h-[42px] border-[#DAA545] bg-[#DAA545]">
-                      <img src={arrow} alt="" />
+                      <img src={arrow} alt="arrow" />
                     </span>
                     <span>
                       <TitleText
                         text={
                           <>
-                            Cocoa: <br />
-                            $4,240
+                            {activeSlide.crop}: <br />
+                            {activeSlide.price}
                           </>
                         }
                         fontWeight="font-semibold"
                         color="text-[#F9FBF9]"
-                        className="text-[18px]"
+                        className="text-[18px] transition-all duration-500"
                       />
                     </span>
                   </div>
                   <DescriptionText
-                    text="+12.4% vs last week"
+                    text={activeSlide.change}
                     size="text-[13px]"
                     color="text-[#F9FBF9]"
                     className="px-2 mt-2"
@@ -191,16 +214,16 @@ const HeroSection = () => {
         <div className="xl:px-[4rem] md:px-[3rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[20rem]">
           <StatSection />
         </div>
-        <div className="">
+        <div>
           <ExistSection />
         </div>
         <div>
           <About />
         </div>
-        <div className="xl:mt-[6rem] md:mt-[22rem] mt-[12rem]">
+        <div className="xl:mt-[6rem] md:mt-[22rem] mt-[10rem]">
           <Card />
         </div>
-        <div className="xl:px-[18rem] md:px-[6rem] px-[1rem] xl:mt-[6rem] md:mt-[6rem] mt-[5rem] xl:pb-[7rem] pb-[4rem] md:pb-[4rem]">
+        <div className="xl:px-[18rem] md:px-[6rem] px-[1rem] xl:mt-[6rem] md:mt-[6rem] mt-[3rem] xl:pb-[7rem] pb-[4rem] md:pb-[4rem]">
           <Faqs />
         </div>
       </div>

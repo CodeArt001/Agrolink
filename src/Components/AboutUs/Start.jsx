@@ -30,6 +30,7 @@ const Start = () => {
             paddingTB="py-[0.80rem]"
             paddingRL="px-10"
             borderRadius="rounded-[1rem]"
+            className="text-nowrap"
           />
           <Button
             variant="commercial"
@@ -37,6 +38,7 @@ const Start = () => {
             paddingTB="py-[0.80rem]"
             paddingRL="px-10"
             borderRadius="rounded-[1rem]"
+            className="text-nowrap"
           />
         </div>
       </div>

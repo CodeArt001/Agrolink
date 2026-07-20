@@ -83,7 +83,7 @@ const Faqs = () => {
               }}
             >
               <div className="overflow-hidden">
-                <p className="xl:pl-24 pl-14 mt-3 xl:text-[14px] text-[11px] font-sans xl:w-[700px] text-[#041B0E]/80 font-semibold">
+                <p className="xl:pl-24 pl-14 mt-1 xl:text-[14px] text-[11px] font-sans xl:w-[700px] text-[#041B0E]/80 ">
                   {items.answer}
                 </p>
               </div>

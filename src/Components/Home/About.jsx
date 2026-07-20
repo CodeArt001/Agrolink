@@ -48,16 +48,16 @@ const About = () => {
           <motion.div variants={fadeUp}>
             <DescriptionText
               text="Built for Every Stakeholder in the Agricultural Value Chain"
-              size="xl:text-[40px] md:text-[40px] text-[25px]"
+              size="xl:text-[40px] md:text-[40px] text-[22px]"
               color="text-[#041B0E]"
-              className="font-sans font-semibold pb-4 xl:w-[580px] md:w-[580px] w-[356px] md:mx-auto xl:mx-0 mx-auto"
+              className="font-sans font-semibold pb-4 xl:w-[580px] xl:max-w-[580px] md:w-[580px] md:max-w-[580px] w-full max-w-[356px] md:mx-auto xl:mx-0 mx-auto"
             />
           </motion.div>
           <motion.div variants={fadeUp}>
             <DescriptionText
               text="Our platform is designed to serve the unique needs of every key participant in the agro-economy. Whether you're growing crops, sourcing commodities, or financing agricultural businesses, you'll find the tools and insights needed to operate more efficiently and grow with confidence."
               size="xl:text-[16px] md:text-[16px] text-[13px]"
-              className="xl:w-[445px] md:w-[600px] w-[358px] xl:text-start text-center md:mx-auto xl:mx-0 mx-auto"
+              className="xl:w-[445px] xl:max-w-[445px] md:w-[600px] md:max-w-[600px] w-full max-w-[356px] xl:text-start text-center md:mx-auto xl:mx-0 mx-auto"
             />
           </motion.div>
         </div>
