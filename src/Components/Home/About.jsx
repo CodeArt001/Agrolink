@@ -21,8 +21,8 @@ const phoneFadeIn = {
 
 const About = () => {
   return (
-    <div
-      className="relative xl:h-[680px] md:h-[550px] h-[500px]"
+    <section
+      className="relative w-full overflow-hidden py-16 lg:py-24"
       style={{
         backgroundImage: `url(${dotted})`,
         backgroundSize: "cover",
@@ -34,46 +34,50 @@ const About = () => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: false, amount: 0.3 }}
-        className="absolute z-10 flex flex-col xl:flex xl:flex-row md:flex md:flex-col xl:gap-6 md:gap-14 gap-10 items-center w-full xl:px-[4rem] md:px-[3rem] px-[1rem] xl:mt-[8rem] mt-[4rem]"
+        className="max-w-9xl mx-auto px-4 sm:px-6 xl:px-16 flex flex-col lg:flex-row items-center justify-between gap-10 lg:gap-12"
       >
-        <div className="w-full xl:w-2/5 md:w-full shrink-0 text-center xl:text-start">
+        {/* Left Column: Text */}
+        <div className="w-full lg:w-1/2 text-center lg:text-left">
           <motion.div variants={fadeUp}>
             <TitleText
               text="About Agrolink"
               color="text-[#0E7A3D]"
-              size="xl:text-[16px] md:text-[16px] text-[14px]"
-              className="font-sans font-semibold pb-4 "
+              size="text-sm md:text-base"
+              className="font-sans font-semibold pb-3"
             />
           </motion.div>
+
           <motion.div variants={fadeUp}>
             <DescriptionText
               text="Built for Every Stakeholder in the Agricultural Value Chain"
-              size="xl:text-[40px] md:text-[40px] text-[22px]"
+              size="text-2xl sm:text-3xl md:text-4xl lg:text-[40px]"
               color="text-[#041B0E]"
-              className="font-sans font-semibold pb-4 xl:w-[580px] xl:max-w-[580px] md:w-[580px] md:max-w-[580px] w-full max-w-[356px] md:mx-auto xl:mx-0 mx-auto"
+              className="font-sans font-semibold pb-4 leading-tight"
             />
           </motion.div>
+
           <motion.div variants={fadeUp}>
             <DescriptionText
               text="Our platform is designed to serve the unique needs of every key participant in the agro-economy. Whether you're growing crops, sourcing commodities, or financing agricultural businesses, you'll find the tools and insights needed to operate more efficiently and grow with confidence."
-              size="xl:text-[16px] md:text-[16px] text-[13px]"
-              className="xl:w-[445px] xl:max-w-[445px] md:w-[600px] md:max-w-[600px] w-full max-w-[356px] xl:text-start text-center md:mx-auto xl:mx-0 mx-auto"
+              size="text-sm md:text-base"
+              className="text-gray-700 max-w-2xl lg:max-w-md mx-auto lg:mx-0"
             />
           </motion.div>
         </div>
 
+        {/* Right Column: Phone Mockups */}
         <motion.div
           variants={phoneFadeIn}
-          className="w-full xl:w-3/5 shrink-0 "
+          className="w-full lg:w-1/2 flex justify-center lg:justify-end"
         >
           <img
             src={phone}
-            alt=""
-            className="w-full xl:max-w-[150rem] md:h-[459px] object-contain"
+            alt="Agrolink mobile app mockup"
+            className="w-full max-w-md lg:max-w-xl h-auto object-contain"
           />
         </motion.div>
       </motion.div>
-    </div>
+    </section>
   );
 };
 
