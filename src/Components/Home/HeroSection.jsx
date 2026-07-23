@@ -61,78 +61,80 @@ const HeroSection = () => {
   const activeSlide = heroSlides[currentIndex];
 
   return (
-    <>
-      <div>
-        <div
-          className="relative xl:h-[680px] md:h-[550px] h-[500px]"
-          style={{
-            backgroundImage: `url(${dotted})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-          }}
-        >
-          <div className="absolute z-10 xl:px-[4rem] px-[1rem] xl:mt-[10rem] md:mt-[8rem] mt-[7rem] xl:flex xl:flex-row md:flex md:flex-row flex flex-col items-center gap-8 w-full">
-            <motion.div
-              variants={container}
-              initial="hidden"
-              whileInView="show"
-              className="w-full"
+    <div className="w-full">
+      {/* Top Hero Container */}
+      <div
+        className="relative w-full py-12 lg:py-20 flex items-center"
+        style={{
+          backgroundImage: `url(${dotted})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      >
+        <div className="max-w-[1400px] mx-auto px-4 mt-10 md:mt-18 xl:mt-18 sm:px-6 lg:px-2 w-full flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8">
+          {/* Left Text Column with YOUR exact text widths preserved */}
+          <motion.div
+            variants={container}
+            initial="hidden"
+            whileInView="show"
+            className="w-full lg:w-1/2 flex flex-col items-start"
+          >
+            <motion.span
+              variants={fadeUp}
+              className="bg-[#2D6A421A] flex justify-center items-center w-[186px] rounded-[0.50rem] px-3 py-1.5"
             >
-              <motion.span
-                variants={fadeUp}
-                className="bg-[#2D6A421A] border-none flex justify-center items-center w-[186px] border-[#2D6A42] rounded-[0.50rem] px-3 py-1.5"
-              >
-                <TitleText
-                  text="AI-First infrastructure"
-                  color="text-[#2D6A42]"
-                  fontWeight="font-bold"
-                  className="text-[14px] font-sans text-center"
-                />
-              </motion.span>
+              <TitleText
+                text="AI-First infrastructure"
+                color="text-[#2D6A42]"
+                fontWeight="font-bold"
+                className="text-[14px] font-sans text-center"
+              />
+            </motion.span>
 
-              <motion.div variants={fadeUp}>
-                <TitleText
-                  text={
-                    <>
-                      Building the Digital Infrastructure for Africa's{" "}
-                      <motion.span
-                        variants={highlightWord}
-                        className="inline-block bg-gradient-to-r from-[#005F2D] from-3% to-[#6E4C00] bg-clip-text text-transparent"
-                      >
-                        Agro-Economy
-                      </motion.span>
-                    </>
-                  }
-                  color="text-[#041B0E]"
-                  size="xl:text-[60px] text-[31px]"
-                  className="font-sans font-bold mt-8 xl:leading-[65px] leading-[40px] xl:w-[800px] w-full"
-                />
-              </motion.div>
-
-              <motion.div variants={fadeUp}>
-                <DescriptionText
-                  text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
-                  size="text-[16px] xl:text-[18px]"
-                  color="text-[#041B0E]"
-                  className="font-inter mt-4 xl:w-[540px] md:w-[350px] w-full"
-                />
-              </motion.div>
-
-              <motion.div variants={fadeUp}>
-                <Button
-                  variant="primary"
-                  text="Get Started"
-                  paddingTB="py-[1rem]"
-                  paddingRL="px-10"
-                  borderRadius="rounded-[0.80rem]"
-                  borderColor="#00193C"
-                  className="mt-6"
-                />
-              </motion.div>
+            <motion.div variants={fadeUp}>
+              <TitleText
+                text={
+                  <>
+                    Building the Digital Infrastructure for Africa's{" "}
+                    <motion.span
+                      variants={highlightWord}
+                      className="inline-block bg-gradient-to-r from-[#005F2D] from-3% to-[#6E4C00] bg-clip-text text-transparent"
+                    >
+                      Agro-Economy
+                    </motion.span>
+                  </>
+                }
+                color="text-[#041B0E]"
+                size="xl:text-[60px] text-[31px]"
+                className="font-sans font-bold mt-8 xl:leading-[65px] leading-[40px] xl:w-[800px] w-full"
+              />
             </motion.div>
 
-            {/* Image & Price Card Section */}
-            <div className="w-full relative xl:h-[491px] h-[300px] rounded-[1rem] overflow-hidden">
+            <motion.div variants={fadeUp}>
+              <DescriptionText
+                text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
+                size="text-[16px] xl:text-[18px]"
+                color="text-[#041B0E]"
+                className="font-inter mt-4 xl:w-[540px] md:w-[350px] w-full"
+              />
+            </motion.div>
+
+            <motion.div variants={fadeUp}>
+              <Button
+                variant="primary"
+                text="Get Started"
+                paddingTB="py-[1rem]"
+                paddingRL="px-10"
+                borderRadius="rounded-[0.80rem]"
+                borderColor="#00193C"
+                className="mt-6"
+              />
+            </motion.div>
+          </motion.div>
+
+          {/* Right Image Container - Fixed scaling so it never squashes */}
+          <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+            <div className="relative w-full max-w-md lg:max-w-xl h-[420px] lg:h-[480px] xl:h-[491px] rounded-[1rem] overflow-hidden shadow-lg">
               {heroSlides.map((slide, index) => (
                 <img
                   key={index}
@@ -210,24 +212,25 @@ const HeroSection = () => {
             </div>
           </div>
         </div>
-
-        <div className="xl:px-[4rem] md:px-[3rem] px-[2rem] xl:py-[4rem] md:py-[3rem] py-[2rem] xl:mt-0 md:mt-[1rem] mt-[20rem]">
-          <StatSection />
-        </div>
-        <div>
-          <ExistSection />
-        </div>
-        <div>
-          <About />
-        </div>
-        <div className="xl:mt-[6rem] md:mt-[22rem] mt-[10rem]">
-          <Card />
-        </div>
-        <div className="xl:px-[18rem] md:px-[6rem] px-[1rem] xl:mt-[6rem] md:mt-[6rem] mt-[3rem] xl:pb-[7rem] pb-[4rem] md:pb-[4rem]">
-          <Faqs />
-        </div>
       </div>
-    </>
+
+      {/* Rest of the page sections */}
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <StatSection />
+      </div>
+      <div>
+        <ExistSection />
+      </div>
+      <div>
+        <About />
+      </div>
+      <div className="my-12 sm:my-16">
+        <Card />
+      </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 my-12 pb-12">
+        <Faqs />
+      </div>
+    </div>
   );
 };
 
