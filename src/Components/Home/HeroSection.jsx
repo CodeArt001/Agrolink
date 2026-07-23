@@ -71,8 +71,8 @@ const HeroSection = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-[1400px] mx-auto px-4 mt-10 md:mt-18 xl:mt-18 sm:px-6 lg:px-2 w-full flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8">
-          {/* Left Text Column with YOUR exact text widths preserved */}
+        <div className="max-w-[1450px] mx-auto px-4 mt-6 lg:mt-10 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+          {/* Left Text Column */}
           <motion.div
             variants={container}
             initial="hidden"
@@ -91,7 +91,7 @@ const HeroSection = () => {
               />
             </motion.span>
 
-            <motion.div variants={fadeUp}>
+            <motion.div variants={fadeUp} className="w-full">
               <TitleText
                 text={
                   <>
@@ -105,17 +105,17 @@ const HeroSection = () => {
                   </>
                 }
                 color="text-[#041B0E]"
-                size="xl:text-[60px] text-[31px]"
-                className="font-sans font-bold mt-8 xl:leading-[65px] leading-[40px] xl:w-[800px] w-full"
+                size="xl:text-[60px] lg:text-[46px] text-[31px]"
+                className="font-sans font-bold mt-6 xl:leading-[65px] lg:leading-[52px] leading-[40px] max-w-[800px] w-full"
               />
             </motion.div>
 
-            <motion.div variants={fadeUp}>
+            <motion.div variants={fadeUp} className="w-full">
               <DescriptionText
                 text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
                 size="text-[16px] xl:text-[18px]"
                 color="text-[#041B0E]"
-                className="font-inter mt-4 xl:w-[540px] md:w-[350px] w-full"
+                className="font-inter mt-4 max-w-[540px] w-full"
               />
             </motion.div>
 
@@ -132,9 +132,9 @@ const HeroSection = () => {
             </motion.div>
           </motion.div>
 
-          {/* Right Image Container - Fixed scaling so it never squashes */}
+          {/* Right Image Container */}
           <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-            <div className="relative w-full max-w-md lg:max-w-xl h-[420px] lg:h-[480px] xl:h-[491px] rounded-[1rem] overflow-hidden shadow-lg">
+            <div className="relative w-full max-w-md lg:max-w-xl h-[380px] sm:h-[440px] lg:h-[480px] xl:h-[491px] rounded-[1rem] overflow-hidden shadow-lg flex-shrink-0">
               {heroSlides.map((slide, index) => (
                 <img
                   key={index}
