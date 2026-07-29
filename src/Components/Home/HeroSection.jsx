@@ -71,7 +71,7 @@ const HeroSection = () => {
           backgroundPosition: "center",
         }}
       >
-        <div className="max-w-[1450px] mx-auto px-4 mt-6 lg:mt-10 sm:px-6 lg:px-8 w-full flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+        <div className="max-w-[1450px] mx-auto px-4 mt-6 lg:mt-10 sm:px-6 lg:px-8 w-full flex flex-col md:flex-row lg:flex-row items-center justify-between gap-8 lg:gap-12">
           {/* Left Text Column */}
           <motion.div
             variants={container}

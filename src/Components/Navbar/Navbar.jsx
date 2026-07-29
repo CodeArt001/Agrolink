@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center xl:px-[4rem] md:px-[3rem] px-[1.5rem] bg-white shadow py-4 ">
             <button
               onClick={() => setIsOpen(true)}
-              className="text-2xl md:hidden"
+              className="text-2xl md:hidden ml-auto"
             >
               <HiMenuAlt3 />
             </button>

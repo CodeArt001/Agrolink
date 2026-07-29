@@ -1,6 +1,7 @@
 import Divider from "./Divider";
 import DescriptionText from "./Text/DescriptionText";
 import TitleText from "./Text/TitleText";
+import cephasLogo from "../assets/images/cephaslogowhite.png"; // adjust path to wherever you save the logo
 
 const Footer = () => {
   return (
@@ -150,9 +151,25 @@ const Footer = () => {
         </div>
       </div>
       <Divider />
-      <div className="text-center mt-6 pb-6 xl:pb-0 font-sans text-[#F9FBF9] text-sm">
-        &copy; {new Date().getFullYear()} Agro-AI Infrastructure Platform. All
-        rights reserved.
+      <div className="flex flex-col items-center gap-4 mt-8 pb-4 xl:pb-8 px-6">
+        <div className="text-center font-sans text-[#F9FBF9] text-sm">
+          &copy; {new Date().getFullYear()} Agro-AI Infrastructure Platform. All
+          rights reserved.
+        </div>
+
+        <Divider />
+
+        <div className="flex w-auto justify-center items-center gap-5">
+          <img
+            src={cephasLogo}
+            alt="Cephas ICT HUB Logo"
+            className=" w-auto opacity-90 h-5"
+          />
+          <span className="font-bold text-[#F9FBF9] text-xs">
+            A product of{" "}
+            <span className="font-semibold text-[#DAA545]">Cephas ICT HUB</span>
+          </span>
+        </div>
       </div>
     </footer>
   );
