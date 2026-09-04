@@ -3,6 +3,7 @@ import TitleText from "../Text/TitleText";
 import { Link, NavLink } from "react-router-dom";
 import Button from "../Buttons/Button";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
+import cephas from "../../assets/images/cephaslogo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,20 +19,25 @@ const Navbar = () => {
         <div>
           {/* MAIN NAV BAR */}
           <div className="flex justify-between items-center xl:px-[4rem] md:px-[3rem] px-[1.5rem] bg-white shadow py-4 ">
-            <button
-              onClick={() => setIsOpen(true)}
-              className="text-2xl md:hidden ml-auto"
-            >
-              <HiMenuAlt3 />
-            </button>
             <Link to="/">
-              <TitleText
+              <img
+                src={cephas}
+                alt=""
+                className="w-auto h-10 xl:flex md:flex cursor-pointer"
+              />
+              {/* <TitleText
                 text="Agrolink"
                 size={`xl:text-[24px] md:text-[20px] text-[14px] `}
                 color="text-[#0A4E29]"
-                className="font-sans font-semibold xl:flex md:flex hidden cursor-pointer"
-              />
+                className=""
+              /> */}
             </Link>
+            <button
+              onClick={() => setIsOpen(true)}
+              className="text-2xl md:hidden "
+            >
+              <HiMenuAlt3 />
+            </button>
 
             {/* Desktop Links */}
             <div className="hidden md:flex gap-12 items-center text-[16px] font-sans ">
@@ -67,13 +73,14 @@ const Navbar = () => {
           ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
           >
             {/* HEADER INSIDE SIDEBAR (This holds the X) */}
-            <div className="flex justify-between items-center px-[2rem] py-5 bg-white mb-3">
-              <TitleText
+            <div className="flex justify-between items-center px-[2rem] py-5 shadow bg-white mb-3">
+              {/* <TitleText
                 text="Agrolink"
                 size="text-[16px]"
                 color="text-[#0A4E29]"
                 className="font-sans font-semibold"
-              />
+              /> */}
+              <img src={cephas} alt="" className="w-auto h-10 flex lg:hidden" />
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-2xl text-black"
@@ -83,7 +90,7 @@ const Navbar = () => {
             </div>
 
             {/* LINKS INSIDE SIDEBAR */}
-            <div className="flex flex-col px-10 gap-8">
+            <div className="flex flex-col px-10 gap-8 mt-3">
               {navLinks.map((links, index) => (
                 <NavLink
                   key={links.href}

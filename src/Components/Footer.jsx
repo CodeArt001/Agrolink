@@ -5,7 +5,7 @@ import cephasLogo from "../assets/images/cephaslogowhite.png"; // adjust path to
 
 const Footer = () => {
   return (
-    <footer className="bg-[#005F2D] w-full xl:h-[378px] overflow-x-hidden">
+    <footer className="bg-[#005F2D] w-full xl:min-h-[378px] overflow-x-hidden">
       <div className="flex flex-col xl:flex-row md:flex-col justify-between xl:px-[6rem] md:px-[4rem] px-[1.5rem] py-12 gap-10 xl:gap-0 md:gap-10">
         <div>
           <TitleText
@@ -166,7 +166,7 @@ const Footer = () => {
             className=" w-auto opacity-90 h-5"
           />
           <span className="font-bold text-[#F9FBF9] text-xs">
-            A product of{" "}
+            A Product of{" "}
             <span className="font-semibold text-[#DAA545]">Cephas ICT HUB</span>
           </span>
         </div>
