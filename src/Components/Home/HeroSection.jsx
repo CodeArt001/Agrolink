@@ -112,7 +112,7 @@ const HeroSection = () => {
 
             <motion.div variants={fadeUp} className="w-full">
               <DescriptionText
-                text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa."
+                text="An AI-powered platform connecting agriculture's key stakeholders to drive smarter farming, transparent trade, seamless financing, and efficient supply chains across West Africa"
                 size="text-[16px] xl:text-[18px]"
                 color="text-[#041B0E]"
                 className="font-inter mt-4 max-w-[540px] w-full"
