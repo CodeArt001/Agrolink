@@ -7,9 +7,7 @@ import "@fontsource/geist-sans";
 import "@fontsource/geist-mono";
 import "@fontsource-variable/inter";
 
-if (!OWN_HOSTS.includes(window.location.hostname)) {
-  document.title = "Cephas Suite";
-}
+
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
