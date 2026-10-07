@@ -5,6 +5,6 @@
   "rewrites": [
     { "source": "/agrolink/assets/:path*", "destination": "/assets/:path*" },
     { "source": "/agrolink/favicon.svg", "destination": "/favicon.svg" },
-    { "source": "/agrolink/:path*", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
