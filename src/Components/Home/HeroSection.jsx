@@ -100,7 +100,7 @@ const HeroSection = () => {
                       variants={highlightWord}
                       className="inline-block bg-gradient-to-r from-[#005F2D] from-3% to-[#6E4C00] bg-clip-text text-transparent"
                     >
-                      Agro-Economy
+                      Agro-Economy.""
                     </motion.span>
                   </>
                 }

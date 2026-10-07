@@ -1,6 +1,10 @@
 {
+  "redirects": [
+    { "source": "/", "destination": "/agrolink/", "permanent": false }
+  ],
   "rewrites": [
     { "source": "/agrolink/assets/:path*", "destination": "/assets/:path*" },
-    { "source": "/(.*)", "destination": "/" }
+    { "source": "/agrolink/favicon.svg", "destination": "/favicon.svg" },
+    { "source": "/agrolink/:path*", "destination": "/index.html" }
   ]
 }
